@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+/* font-family: 'Anton', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+/*기본 초기화*/
+ 
+    * { margin: 0; padding: 0; }
+ 
+    ol, ul { list-style: none; }
+ 
+    a {
+        text-decoration: none;
+        color: #555;
+        outline: 0;
+    }
+ 
+    img {
+        border: 0;
+    }
+ 
+    body {
+        font: 12px/1.6 arial;
+        color: #000;
+    }
+ 
+	/*로고*/
+	h1{
+		position:fixed;
+		top:50%;
+		margin-top:-250px;
+		left:8%;
+		z-index:10;
+	}
+	h1 img{
+		width:130px;
+	}
+	
+
+	
+	
+	/*내비게이션 영역*/
+
+	#menu{
+		position:fixed;
+		right:5%;top:15%;
+		z-index:15;
+	}
+	#menu ul li{}	
+	#menu a{
+		display:block;
+		width:100px;
+		height:80px;
+		line-height:50px;
+		font-family: 'Anton', sans-serif;
+		font-size:30px;
+		color:#000;
+		text-align:right;
+		overflow:hidden;
+		box-sizing:border-box;
+		opacity:0.8;
+		transition:all 0.6s;
+	}
+	#menu li:hover a{
+		font-size:40px;
+		opacity:1;
+	}
+	#menu li.on a{
+		font-size:40px;
+		opacity:1;
+	}
+	/*각메뉴에 호버시 설정*/
+	#menu li:nth-child(1):hover a{
+		color:#fff;
+	}
+	#menu li:nth-child(2):hover a{
+		color:#fff;
+	}
+	#menu li:nth-child(3):hover a{
+		color:#fff;
+	}
+	#menu li:nth-child(4):hover a{
+		color:#fff;
+	}
+	
+	/*각 메뉴 선택시 설정*/
+	
+	#menu li:nth-child(1).on a{
+		color:#fff;
+	}
+	#menu li:nth-child(2).on a{
+		color:#fff;
+	}
+	#menu li:nth-child(3).on a{
+		color:#fff;
+	}
+	#menu li:nth-child(4).on a{
+		color:#fff;
+	}
+	
+	/*컨텐츠 레이아웃 설정*/
+	
+	section{
+		width:100%;
+		height:700px; /*임시지정*/
+		position:relative;
+		background-size:cover;
+		background-position:right center;
+		background-attachment:fixed;
+		overflow:hidden;
+	}
+	
+	/*페이지별 배경 지정*/
+	
+	
+	section:nth-child(1){
+		background-image:url(../images/bg_1.jpg);
+	}
+	section:nth-child(2){
+		background-image:url(../images/bg_2_2.jpg);
+	}
+	section:nth-child(3){
+		background-image:url(../images/bg_3.jpg);
+	}
+	section:nth-child(4){
+		background-image:url(../images/bg_4_.jpg);
+	}
+	
+	
+	/*텍스트(슬로건) 영역*/
+		/* 펜톤 메인컬러  */
+	
+	article{
+		z-index:15;
+	}
+	
+	article .mainimage{
+		position:absolute;
+		left:50%;margin-left:-250px;
+		top:50%;margin-top:-350px;
+		animation:mainimage 3s infinite;		
+	}
+@keyframes mainimage{
+	0%{transform:rotate(0); opacity:1;}
+	50%{transform:rotate(0deg); opacity:0.8;}
+	100%{transform:rotate(0deg); opacity:1;}
+}
+	
+	
+	
+	/*페이지별 슬로건 스타일*/
+	
+	/*
+	section:nth-child(1) p{
+		color:#d4164c;
+	}
+	
+	section:nth-child(1) span{
+		color:#111;
+	}
+	
+	
+	section:nth-child(2) p{
+		color:#fff;
+	}
+	
+	section:nth-child(2) span{
+		color:#fff;
+	}
+	
+	section:nth-child(3) p{
+		color:#fff;
+	}
+	
+	section:nth-child(3) span{
+		color:#ffec6a;
+	}
+	
+	section:nth-child(4) p{
+		color:#005a89;
+	}
+	
+	section:nth-child(4) span{
+		color:#111;
+	}*/
+	
+	
+	/*페이지별 전경 이미지 배치*/
+	
+	/*1페이지*/
+
+
+	.v1{
+		position:absolute;
+		left:27%;top:7%;
+		animation:moveV1 linear 2.5s infinite;
+	}
+	.v2{
+		position:absolute;
+		left:12%;bottom:5%;
+		transform:translateX(-100%);
+		transition:all 2s;
+	}
+	.v2.active{transform:translateX(0%);}
+	
+	.v3{
+		position:absolute;
+		top:7%;
+		right:30%;
+		transform:translateY(-100%);
+		transition:all 2s;
+	}
+	.v3.active{transform:translateY(0%);}	
+	
+	
+	.v4{
+		position:absolute;
+		bottom:18%;
+		right:22%;
+	}
+	
+	.v5{
+		position:absolute;
+		color:#fff;font-size:25px;
+		left:20%;top:7%;
+		font-family: 'Patua One', cursive;
+		transform:translateY(-100%);
+		transition:all 2s;
+	}
+	.v5.active{transform:translateY(0%);}	
+	
+	.v6{
+		position:absolute;
+		/* color:rgba(256,256,256,0.9); */
+		color:#fff;
+		font-size:55px;
+		right:19%;bottom:25%;
+		font-family: 'Anton', sans-serif;
+		transform:translateX(100%);
+		transition:all 2s;
+	}
+	.v6.active{transform:translateX(0%);}	
+	
+	
+@keyframes moveV1{
+	0% {transform:translateY(0%);}
+	50% {transform:translateY(10%);}
+	100%{transform:translateY(0%);}
+}	
+
+	
+	
+	
+	/*2페이지*/
+	
+	.g1{
+		position:absolute;
+		left:25%;
+	}
+	
+	.g2{
+		position:absolute;
+		left:-8%;top:5%;
+		transform:translateX(-100%);
+		transition:all 2.5s;
+	}
+	.g2.active{transform:translatex(0%);}
+	
+	.g2_{
+		position:absolute;
+		right:0;top:50%;
+		transform:translateX(100%);
+		transition:all 2.5s;
+	}
+	.g2_.active{transform:translatex(0%);}
+	
+	.g3{
+		position:absolute;
+		left:28%;top:47%;
+		transform:translateY(-200%);
+		transition:all 2.0s;
+	}
+	.g3.active{transform:translateY(0%);}	
+	
+	.g4{
+		position:absolute;
+		right:30%;top:60%;
+		transform:translateY(-200%);
+		transition:all 1.5s;		
+	}
+	.g4.active{transform:translateY(0%);}		
+	
+	.g5{
+		position:absolute;
+		right:20%;top:25%;
+		transform:translateY(-200%);
+		transition:all 2s;
+	}
+	.g5.active{transform:translateY(0%);}	
+	
+	.g6{
+		position:absolute;
+		left:25%;top:10%;
+		animation:moveG6 linear 2.5s infinite;
+	}
+	.g6_{
+		position:absolute;
+		right:15%;bottom:10%;
+		animation:moveG6 linear 2.5s infinite;
+	}		
+	.g7{
+		position:absolute;
+		right:30%;
+		transform:translateY(-200%);
+		transition:all 2s;
+	}
+	.g7.active{transform:translateY(0%);}	
+
+	.g8{
+		position:absolute;
+		color:#fff;
+		font-size:55px;
+		text-align:right;
+		left:20%;bottom:15%;
+		font-family: 'Anton', sans-serif;
+		transform:translateY(-200%);
+		transition:all 2s;
+	}
+	.g8.active{transform:translateY(0%);}		
+	
+	
+@keyframes moveG6{
+	0% {transform:translateY(0%);}
+	50% {transform:translateY(10%);}
+	100%{transform:translateY(0%);}
+}		
+	
+	
+	
+	
+	/*3페이지*/
+	
+	.rs1{
+		position:absolute;
+		right:-8%;bottom:-30%;
+		transform:translateX(100%);
+		transition:all 1.5s;
+	}
+	.rs1.active{transform:translateX(0%);}	
+	
+	.rs2{
+		position:absolute;
+		left:-8%;top:-30%;
+		transform:translateX(-100%);
+		transition:all 1.5s;
+	}
+	.rs2.active{transform:translateX(0%);}	
+	
+	.rs3{
+		position:absolute;
+		right:0;
+		animation:moveRS3 linear 3s infinite;	
+	}
+	
+	.rs4{
+		position:absolute;
+		color:#fff;
+		font-size:55px;
+		text-align:right;
+		left:20%;top:20%;
+		font-family: 'Anton', sans-serif;
+		transform:translateX(-100%);
+		transition:all 1.5s;
+	}
+	.rs4.active{transform:translateX(0%);}
+
+	.rs5{
+		position:absolute;
+		color:#fff;
+		font-size:55px;
+		text-align:right;
+		right:20%;bottom:10%;
+		font-family: 'Anton', sans-serif;
+		transform:translateX(100%);
+		transition:all 1.5s;
+	}
+	.rs5.active{transform:translateX(0%);}	
+	
+@keyframes moveRS3{
+	0% {transform:rotate(0);}
+	50% {transform:rotate(5deg);}
+	100%{transform:rotate(0);}
+}		
+	
+	
+	/*4페이지*/
+	
+	.m1{
+		position:absolute;
+		right:18%;bottom:5%;
+		transform:translateX(0%);
+		transition:all 2s;
+	}
+	.m1.active{transform:translateX(80%);}
+	
+	.m2{
+		position:absolute;
+		left:26%;bottom:10%;
+		transform:translateX(0%);
+		transition:all 2s;
+	}
+	.m2.active{transform:translateX(-100%);}
+	
+	.m3{
+		position:absolute;
+		right:10%;bottom:0;
+		transform:translateX(0%);
+		transition:all 2s;
+	}
+	.m3.active{transform:translateX(45%);}
+	
+	.m4{
+		position:absolute;
+		right:0;top:-35%;
+		transform:translateX(0%);
+		transition:all 2s;
+	}
+	.m4.active{transform:translateX(25%);}
+	.m5{
+		position:absolute;
+		left:32%;top:3%;
+		transform:translateX(0%);
+		transition:all 2s;
+	}
+	.m5.active{transform:translateX(-190%);} 
+ 	.m6{
+		position:absolute;
+		left:15%;top:15%;
+		transform:translateX(0%);
+		transition:all 2s;
+	}
+	.m6.active{transform:translateX(-70%);}
+	
+ 	.m7{
+		position:absolute;
+		color:#fff;
+		font-size:55px;
+		right:22%;top:10%;
+		font-family: 'Anton', sans-serif;
+		transform:translateX(100%);
+		transition:all 2s;
+	}
+	.m7.active{transform:translateX(0%);}	
+ 
+	.m8{
+		position:absolute;
+		color:#fff;font-size:25px;
+		right:2%;top:50%;
+		font-family: 'Patua One', cursive;
+		transform:translateX(100%);
+		transition:all 2s;
+	}
+	.m8.active{transform:translateX(0%);} 
+ 
+ 
+ 
+ 
+ 
+   
