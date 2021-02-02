@@ -1,2 +1,2 @@
 # Pantone_Website_EventPage
- Pantone Color EventPage
+ https://yerim-choi.github.io/Pantone_Website_EventPage/
